@@ -16,20 +16,20 @@ class Node {
 
 class BinarySearchTree {
   constructor() {
-    this.root = null;
+    this.root1 = null;
   }
 
-    root() {
-    return this.root;
+  root() {
+    return this.root1;
   }
 
-    add(data) {
+  add(data) {
     const newNode = new Node(data);
-    if (!this.root) {
-      this.root = newNode;
+    if (!this.root1) {
+      this.root1 = newNode;
       return this;
     }
-    let current = this.root;
+    let current = this.root1;
     while (true) {
       if (data === current.data) return undefined;
       if (data < current.data) {
@@ -49,7 +49,7 @@ class BinarySearchTree {
   }
 
   has(data) {
-    let current = this.root;
+    let current = this.root1;
     while (current) {
       if (data === current.data) return true;
       if (data < current.data) {
@@ -62,7 +62,7 @@ class BinarySearchTree {
   }
 
   find(data) {
-    let current = this.root;
+    let current = this.root1;
     while (current) {
       if (data === current.data) return current;
       if (data < current.data) {
@@ -96,13 +96,13 @@ class BinarySearchTree {
         return node;
       }
     }
-    this.root = removeNode(this.root, data);
+    this.root11 = removeNode(this.root1, data);
     return this;
   }
 
   min() {
-    if (!this.root) return null;
-    let current = this.root;
+    if (!this.root1) return null;
+    let current = this.root1;
     while (current.left) {
       current = current.left;
     }
@@ -110,8 +110,8 @@ class BinarySearchTree {
   }
 
   max() {
-    if (!this.root) return null;
-    let current = this.root;
+    if (!this.root1) return null;
+    let current = this.root1;
     while (current.right) {
       current = current.right;
     }
